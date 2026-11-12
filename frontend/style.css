@@ -23,19 +23,16 @@ body{
 
 .topbar{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
 
-    width: 100%;
+    height: 5vh;
 
     background: var(--sec-color);
 }
 
-.topbar ul{
-    list-style: none;
-}
-
-.topbar ul li a{
+.topbar a{
     text-decoration: none;
     font-weight: 700;
 
@@ -50,11 +47,4 @@ body{
 
     width: 95%;
     gap: 5vh;
-}
-
-.main-content main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
