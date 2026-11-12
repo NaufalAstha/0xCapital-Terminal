@@ -1,0 +1,60 @@
+:root{
+    --bakcground : #000;
+    --color : #fff;
+    --sec-color : #151515;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background: var(--bakcground);
+    color: var(--color);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+.topbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    background: var(--sec-color);
+}
+
+.topbar ul{
+    list-style: none;
+}
+
+.topbar ul li a{
+    text-decoration: none;
+    font-weight: 700;
+
+    color: var(--color);
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+
+    width: 95%;
+    gap: 5vh;
+}
+
+.main-content main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
