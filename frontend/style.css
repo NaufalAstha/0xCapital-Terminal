@@ -49,10 +49,11 @@ body{
 
 .main-content{
     display: flex;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
 
     width: 95%;
+    height: 100%;
     gap: 5vh;
 }
