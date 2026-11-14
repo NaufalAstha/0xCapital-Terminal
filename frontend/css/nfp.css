@@ -12,4 +12,6 @@
 body{
     background: var(--bakcground);
     color: var(--color);
+
+    font-family: 'Poppins', sans-serif;
 }
