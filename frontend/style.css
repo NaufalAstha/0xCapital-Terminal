@@ -30,9 +30,6 @@ body{
     align-items: center;
     text-align: center;
 
-    /* margin-left: 3vh;
-    margin-right: 3vh; */
-
     height: 4vh;
 
     background: var(--sec-color);
@@ -95,13 +92,22 @@ body{
     background: var(--thrid-color);
 
     margin-top: 1.5vh;
-    margin-left: 1vh;
-    margin-right: 1vh;
 
     padding: 0 2vh;
 
     width: 100%;
     height: 5vh;
+}
+
+.main-content .bar .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .bar .clock{
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
 }
 
 .main-content .bar button{
@@ -113,7 +119,6 @@ body{
 
     color: var(--color);
     background: none;
-    /* background: var(--sec-color); */
 }
 
 .main-content .bar button:hover{
