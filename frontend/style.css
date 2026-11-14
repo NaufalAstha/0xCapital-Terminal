@@ -27,7 +27,10 @@ body{
     align-items: center;
     text-align: center;
 
-    height: 5vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+
+    height: 7vh;
 
     background: var(--sec-color);
 }
@@ -37,6 +40,11 @@ body{
     font-weight: 700;
 
     color: var(--color);
+}
+
+.topbar .nav{
+    display: flex;
+    justify-content: space-between;
 }
 
 .main-content{
