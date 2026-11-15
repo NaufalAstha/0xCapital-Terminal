@@ -105,6 +105,14 @@ body{
     align-items: center;
 }
 
+.main-content .bar .time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.5vh;
+}
+
 .main-content .bar .clock{
     font-variant-numeric: tabular-nums;
     font-weight: 700;
