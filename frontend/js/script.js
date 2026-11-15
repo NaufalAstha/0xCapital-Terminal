@@ -53,3 +53,21 @@ layoutButtons.forEach((button) => {
 });
 
 renderCharts(Number((chartGrid && chartGrid.dataset.chartCount) || 2));
+
+document.addEventListener('contextmenu', function(e) {
+	e.preventDefault();
+});
+
+document.addEventListener('keydown', function(e) {
+	if(e.key == 'F12') {
+		e.preventDefault();
+	}
+
+	if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.key === 'i' || e.key === 'j' || e.key === 'c')) {
+        e.preventDefault();
+    }
+    
+    if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+        e.preventDefault();
+    }
+});
