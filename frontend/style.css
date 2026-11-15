@@ -76,12 +76,12 @@ body{
 /* Main Content */
 .main-content{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: stretch;
     text-align: center;
 
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 4vh);
 }
 
 .main-content .bar{
@@ -97,6 +97,20 @@ body{
 
     width: 100%;
     height: 5vh;
+    flex: 0 0 5vh;
+}
+
+.main-content .chart-panel{
+    flex: 1;
+    min-height: 320px;
+    width: 100%;
+    margin-top: 1.5vh;
+}
+
+.chart-panel .tradingview-widget-container,
+.chart-panel .tradingview-widget-container__widget{
+    width: 100%;
+    height: 100%;
 }
 
 .main-content .bar .nav{
