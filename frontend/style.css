@@ -102,15 +102,25 @@ body{
 
 .main-content .chart-panel{
     flex: 1;
-    min-height: 320px;
+    min-height: 0;
     width: 100%;
     margin-top: 1.5vh;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(var(--chart-rows, 1), minmax(0, 1fr));
+    gap: 1.5vh;
 }
 
 .chart-panel .tradingview-widget-container,
 .chart-panel .tradingview-widget-container__widget{
     width: 100%;
     height: 100%;
+    min-width: 0;
+    min-height: 0;
+}
+
+.chart-panel[data-chart-count="3"] .tradingview-widget-container:last-child{
+    grid-column: 1 / -1;
 }
 
 .main-content .bar .nav{
@@ -145,4 +155,25 @@ body{
 
 .main-content .bar button:hover{
     cursor: pointer;
+}
+
+.main-content .bar button.active{
+    color: var(--highlight);
+}
+
+@media (max-width: 700px){
+    .main-content{
+        height: auto;
+        min-height: calc(100vh - 4vh);
+    }
+
+    .main-content .chart-panel{
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-auto-rows: minmax(320px, 70vh);
+    }
+
+    .chart-panel[data-chart-count="3"] .tradingview-widget-container:last-child{
+        grid-column: auto;
+    }
 }

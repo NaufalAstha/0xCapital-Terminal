@@ -23,9 +23,9 @@
         <div class="bar">
             <div class="nav">
                 <p>Layout : </p>
-                <button>2x</button>
-                <button>3x</button>
-                <button>4x</button>
+                <button type="button" class="active" data-chart-count="2" aria-pressed="true">2x</button>
+                <button type="button" data-chart-count="3" aria-pressed="false">3x</button>
+                <button type="button" data-chart-count="4" aria-pressed="false">4x</button>
             </div>
 
             <div class="time">
@@ -34,10 +34,8 @@
             </div>
         </div>
 
-        <section class="chart-panel" aria-label="TradingView chart">
-            <div class="tradingview-widget-container">
-                <div class="tradingview-widget-container__widget"></div>
-                <script id="tradingview-config" type="application/json">
+        <section class="chart-panel" id="chart-grid" data-chart-count="2" aria-label="TradingView charts">
+            <script id="tradingview-config" type="application/json">
                 {
                     "autosize": true,
                     "symbol": "OANDA:XAUUSD",
@@ -51,8 +49,7 @@
                     "hide_side_toolbar": false,
                     "support_host": "https://www.tradingview.com"
                 }
-                </script>
-            </div>
+            </script>
         </section>
 
     </main>
