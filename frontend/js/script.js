@@ -54,6 +54,7 @@ layoutButtons.forEach((button) => {
 
 renderCharts(Number((chartGrid && chartGrid.dataset.chartCount) || 2));
 
+// Non Active Function
 document.addEventListener('contextmenu', function(e) {
 	e.preventDefault();
 });
