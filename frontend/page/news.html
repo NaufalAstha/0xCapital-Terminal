@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>0xCapital Terminal - News</title>
+    <link rel="stylesheet" href="../css/news.css">
 </head>
 <body>
     <div class="topbar">
         
-        <a href="#"><span>F1</span> CHART</a>
-        <a href="#"><span>F2</span> ECONOMIC DATA</a>
-        <a href="#" class="active"><span>F3</span> NEWS</a>
-        <a href="#"><span>F4</span> JOURNAL</a>
-        <a href="#"><span>F5</span> PORTOFOLIO</a>
-        <a href="#"><span>F6</span> ACCOUNT</a>
+        <a href="../index.html"><span>F1</span> CHART</a>
+        <a href="../page/economic-data.html"><span>F2</span> ECONOMIC DATA</a>
+        <a href="../page/news.html" class="active"><span>F3</span> NEWS</a>
+        <a href="../page/journal.html"><span>F4</span> JOURNAL</a>
+        <a href="../page/portofolio.html"><span>F5</span> PORTOFOLIO</a>
+        <a href="../page/account.html"><span>F6</span> ACCOUNT</a>
 
     </div>
 
+    <main>
+        <div class="news-station">
+            <button class="active">
+                <span>1</span> 
+                New York Times
+            </button>
+
+            <button>
+                <span>2</span>
+                The Wall Street Journal
+            </button>
+
+            <button>
+                <span>3</span>
+                Google News
+            </button>
+        </div>
+
+        <div class="news" id="news-feed">
+            Load A News
+        </div>
+    </main>
+
 <script src="../frontend/js/script.js"></script>
 <script src="../js/page-switch.js"></script>
+<script src="../js/news-switch.js"></script>
 </body>
 </html>

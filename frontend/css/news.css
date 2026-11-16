@@ -1,0 +1,106 @@
+:root{
+    --bakcground : #000;
+    --color : #fff;
+    --sec-color : #151515;
+    --thrid-color: #252525;
+    --highlight : #FFAE11;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background: var(--bakcground);
+    color: var(--color);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Topbar */
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    height: 4vh;
+
+    background: var(--sec-color);
+}
+
+.topbar span{
+    color: var(--highlight);
+}
+
+.topbar a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1vh;
+
+    gap: 0.5vh;
+
+    border: 1px solid var(--thrid-color);
+
+    color: var(--color);
+
+    width: 100%;
+    height: 100%;
+}
+
+.topbar .nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbar .active{
+    border: 1px solid var(--highlight);
+    background: var(--highlight);
+    color: var(--color);
+}
+
+.topbar .active span{
+    color: var(--color);
+}
+
+/* News Station */
+main .news-station{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1.5vh;
+}
+
+main .news-station button{
+    color: var(--color);
+    background: var(--sec-color);
+    border: 1px solid var(--thrid-color);
+
+    font-weight: 800;
+
+    width: 100%;
+    height: 5vh;
+}
+
+main .news-station span{
+    color: var(--highlight);
+}
+
+main .news-station .active{
+    background: var(--thrid-color);
+}
+
+main .news-station button:hover{
+    cursor: pointer;
+}
