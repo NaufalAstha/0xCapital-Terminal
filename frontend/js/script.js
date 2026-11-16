@@ -64,6 +64,10 @@ document.addEventListener('keydown', function(e) {
 		e.preventDefault();
 	}
 
+	if(e.key == 'F1') {
+		e.preventDefault();
+	}
+
 	if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.key === 'i' || e.key === 'j' || e.key === 'c')) {
         e.preventDefault();
     }
