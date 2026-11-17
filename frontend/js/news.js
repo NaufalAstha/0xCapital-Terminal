@@ -1,5 +1,5 @@
 async function loadRSSFeed() {
-    const jsonUrl = 'https://rss.app/feeds/v1.1/CxbxYmOV55bLyb3m.json';
+    const jsonUrl = 'https://rss.app/feeds/v1.1/PipM1at9feyTrIIK.json';
     const newsList = document.getElementById('news-feed');
 
     function showMessage(message) {
