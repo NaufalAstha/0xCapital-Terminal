@@ -89,7 +89,8 @@ body{
     justify-content: space-between;
     align-items: center;
 
-    background: var(--thrid-color);
+    background: var(--sec-color);
+    border: 1px solid var(--thrid-color);
 
     margin-top: 1.5vh;
 
@@ -147,6 +148,34 @@ body{
 
 .main-content .bar button.active{
     color: var(--highlight);
+}
+
+/* Session */
+main .market-session{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.session{
+    display: none;
+}
+
+.session.active-session{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2vh;
+
+    gap: 1vh;
+}
+
+.session.active-session span{
+    color: var(--highlight);
+
+    font-weight: 500;
 }
 
 /* Chart */

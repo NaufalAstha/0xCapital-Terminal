@@ -1,3 +1,4 @@
+// Time
 const clock = document.getElementById('clock');
 const chartGrid = document.getElementById('chart-grid');
 const chartConfig = document.getElementById('tradingview-config');
@@ -76,3 +77,32 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 });
+
+// Session
+const sessionCount = document.querySelectorAll('.session');
+const sessionTimes = [
+	{id: 'asia', start: 7 * 60, end: 13 * 60 + 59},
+	{id: 'overlap-asia-euro', start: 14 * 60, end: 15 * 60 + 59},
+	{id: 'europe', start: 16 * 60, end: 18 * 60 + 59},
+	{id: 'overlap-euro-america', start: 19 * 60, end: 22 * 60 + 59},
+	{id: 'america', start: 23 * 60, end: 3 * 60 + 59}
+];
+
+function activeSession() {
+	const now = new Date();
+	const currentTime = now.getHours() * 60 + now.getMinutes();
+	const activeSessionId = sessionTimes.find((session) => {
+		if (session.start <= session.end) {
+			return currentTime >= session.start && currentTime <= session.end;
+		}
+
+		return currentTime >= session.start || currentTime <= session.end;
+	})?.id;
+
+	sessionCount.forEach((session) => {
+		session.classList.toggle('active-session', session.id === activeSessionId);
+	});
+}
+
+activeSession();
+setInterval(activeSession, 1000);
