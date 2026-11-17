@@ -19,30 +19,14 @@
     </div>
 
     <main>
-        <div class="news-station">
-            <button class="active">
-                <span>1</span> 
-                New York Times
-            </button>
-
-            <button>
-                <span>2</span>
-                The Wall Street Journal
-            </button>
-
-            <button>
-                <span>3</span>
-                Google News
-            </button>
-        </div>
-
-        <div class="news" id="news-feed">
-            Load A News
+        <div class="news" id="news">
+            <ul id="news-feed" aria-live="polite">
+                <li>Loading news...</li>
+            </ul>
         </div>
     </main>
 
-<script src="../frontend/js/script.js"></script>
 <script src="../js/page-switch.js"></script>
-<script src="../js/news-switch.js"></script>
+<script src="../js/news.js"></script>
 </body>
 </html>

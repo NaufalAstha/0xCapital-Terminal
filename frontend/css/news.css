@@ -17,6 +17,9 @@ body{
     justify-content: center;
     flex-direction: column;
 
+    min-height: 100vh;
+    min-height: 100dvh;
+
     background: var(--bakcground);
     color: var(--color);
 
@@ -31,6 +34,7 @@ body{
     text-align: center;
 
     height: 4vh;
+    flex: 0 0 4vh;
 
     background: var(--sec-color);
 }
@@ -73,13 +77,20 @@ body{
     color: var(--color);
 }
 
+main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 1.5vh 1.5vh;
+}
+
 /* News Station */
 main .news-station{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    gap: 1.5vh;
     margin-top: 1.5vh;
+    flex: 0 0 auto;
 }
 
 main .news-station button{
@@ -89,8 +100,9 @@ main .news-station button{
 
     font-weight: 800;
 
-    width: 100%;
-    height: 5vh;
+    flex: 1;
+    min-width: 0;
+    height: clamp(44px, 5vh, 64px);
 }
 
 main .news-station span{
@@ -103,4 +115,128 @@ main .news-station .active{
 
 main .news-station button:hover{
     cursor: pointer;
+    border-color: var(--highlight);
+}
+
+main .news{
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    padding-top: 1.5vh;
+}
+
+main .news ul{
+    display: grid;
+    align-content: start;
+    gap: 0.75rem;
+    width: min(100%, 1000px);
+    height: 100%;
+    overflow-y: auto;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0.5rem;
+    scrollbar-color: var(--thrid-color) var(--bakcground);
+}
+
+main .news li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-width: 0;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--thrid-color);
+    background: var(--sec-color);
+    line-height: 1.5vh;
+}
+
+main .news-image{
+    flex: 0 0 160px;
+    width: 160px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--thrid-color);
+}
+
+main .news-image img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .news-content{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+    min-width: 0;
+    gap: 0.75rem;
+}
+
+main .news li a{
+    color: var(--color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main .news li a:hover{
+    color: var(--highlight);
+}
+
+main .news .news-date{
+    flex: 0 0 auto;
+    color: #aaa;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 640px){
+    .topbar{
+        display: grid;
+        flex-basis: auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        height: auto;
+    }
+
+    .topbar a{
+        min-width: 0;
+        min-height: 34px;
+        padding: 0.35rem 0.1rem;
+        width: auto;
+        height: auto;
+        font-size: 0.65rem;
+    }
+
+    main{
+        padding-right: 3vw;
+        padding-left: 3vw;
+    }
+
+    main .news-station{
+        gap: 0.5rem;
+    }
+
+    main .news-station button{
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    main .news li{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.4rem;
+        padding: 0.9rem;
+    }
+
+    main .news-image{
+        flex: 0 0 auto;
+        width: 100%;
+        max-height: 220px;
+    }
+
+    main .news-content{
+        align-self: auto;
+        width: 100%;
+    }
 }
