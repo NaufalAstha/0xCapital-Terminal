@@ -173,8 +173,6 @@ main .market-session{
     justify-content: center;
     align-items: center;
 
-    font-size: 2vh;
-
     gap: 1vh;
 }
 
@@ -192,7 +190,7 @@ main .market-session{
     gap: 2.5vh;
 
     font-weight: 700;
-    font-size: 1.7vh;
+    font-size: 0.8rem;
 }
 
 .main-content .btn a{
@@ -216,7 +214,7 @@ main .market-session{
     border: 1px solid var(--thrid-color);
 
     font-weight: 700;
-    font-size: 1.7vh;
+    font-size: 0.8rem;
 
     padding: 0.5vh 3vh;
 }
@@ -231,4 +229,76 @@ main .market-session{
 
 .chart-panel[data-chart-count="3"] .tradingview-widget-container:last-child{
     grid-column: 1 / -1;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    .topbar{
+        justify-content: flex-start;
+        height: 44px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .topbar::-webkit-scrollbar{
+        display: none;
+    }
+
+    .topbar a{
+        flex: 0 0 auto;
+        width: auto;
+        padding: 0 1rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    .main-content{
+        height: auto;
+        min-height: calc(100vh - 44px);
+        min-height: calc(100dvh - 44px);
+    }
+
+    .main-content .bar{
+        height: auto;
+        flex: 0 0 auto;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        padding: 0.65rem;
+    }
+
+    .main-content .bar .nav{
+        justify-content: flex-start;
+    }
+
+    .main-content .bar .time{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.5rem 1rem;
+    }
+
+    .main-content .bar .time .time-group{
+        gap: 0.35rem;
+    }
+
+    .main-content .bar button{
+        padding: 0.5rem 0.75rem;
+    }
+
+    .main-content .btn{
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .main-content .btn a,
+    .main-content .btn .alert-btn{
+        padding: 0.5rem 1rem;
+    }
+
+    .main-content .chart-panel{
+        flex: 0 0 auto;
+        min-height: 0;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: none;
+        grid-auto-rows: minmax(280px, 60vh);
+    }
 }

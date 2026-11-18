@@ -107,3 +107,51 @@ main .dxy-chart{
     width: 70%;
     height: 92.5vh;
 }
+
+/* Responsive */
+@media (max-width: 768px){
+    .topbar{
+        justify-content: flex-start;
+        height: 44px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .topbar::-webkit-scrollbar{
+        display: none;
+    }
+
+    .topbar a{
+        flex: 0 0 auto;
+        width: auto;
+        padding: 0 1rem;
+        font-size: 0.75rem;
+        white-space: nowrap;
+    }
+
+    main{
+        align-items: stretch;
+        flex-direction: column;
+        height: auto;
+        margin-top: 0.75rem;
+        padding: 0 1rem 1rem;
+        gap: 0.75rem;
+    }
+
+    main .economic-calender,
+    main .dxy-chart{
+        width: 100%;
+        height: 60vh;
+        min-height: 360px;
+    }
+
+    main .dxy-chart{
+        overflow: hidden;
+    }
+
+    main .dxy-chart iframe{
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
+}
