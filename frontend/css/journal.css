@@ -72,3 +72,101 @@ body{
 .topbar .active span{
     color: var(--color);
 }
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5vh;
+
+    width: 100%;
+}
+
+/* Right Container */
+main .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--sec-color);
+    border: 1px solid var(--thrid-color);
+
+    margin-top: 1.5vh;
+    margin-right: 1.5vh;
+    gap: 1.5vh;
+
+    width: 40%;
+    height: 100%;
+}
+
+main .right .button-group{
+    margin-top: 1.5vh;
+    gap: 1.5vh;
+}
+
+main .right .button-group button{
+    border: none;
+
+    padding: 1.5vh 17.5vh;
+
+    font-weight: 700;
+
+    color: var(--color);
+}
+
+main .right .button-group button:hover{
+    cursor: pointer;
+}
+
+main .right .button-group .buy{
+    background: #089981;
+}
+
+main .right .button-group .sell{
+    background: #F23645;
+}
+
+main .right .entry-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5vh;
+}
+
+main .right .entry-group .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1.5vh;
+}
+
+main .right .entry-group .input input{
+    border: none;
+
+    background: var(--thrid-color);
+
+    padding: 0.3vh;
+}
+
+main .right .entry-group .input input:focus{
+    color: var(--color);
+
+    outline: none;
+}
+
+
+/* Left Container */
+main .left{
+    background: var(--sec-color);
+    border: 1px solid var(--thrid-color);
+
+    margin-top: 1.5vh;
+    margin-left: 1.5vh;
+
+    width: 60%;
+    height: 100%;
+}

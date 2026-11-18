@@ -29,16 +29,25 @@
             </div>
 
             <div class="time">
-                <p>WIB :</p>
-                <time class="clock" id="clock" aria-label="Time Now"></time>
+                <div class="time-group">
+                    <p>WIB :</p>
+                    <time class="clock" id="clock" aria-label="Time Now"></time>
+                </div>
+
+                <div class="market-session">
+                    <p class="session" id="asia">Asia Session</p>
+                    <p class="session" id="overlap-asia-euro">Overlap Session <span>(Asia To Europe)</span></p>
+                    <p class="session" id="europe">Europe Session</p>
+                    <p class="session" id="overlap-euro-america">Overlap Session <span>(Europe To America)</span></p>
+                    <p class="session" id="america">America Session</p>
+                </div>
             </div>
 
-            <div class="market-session">
-                <p class="session" id="asia">Asia Session</p>
-                <p class="session" id="overlap-asia-euro">Overlap Session <span>(Asia To Europe)</span></p>
-                <p class="session" id="europe">Europe Session</p>
-                <p class="session" id="overlap-euro-america">Overlap Session <span>(Europe To America)</span></p>
-                <p class="session" id="america">America Session</p>
+            <div class="btn">
+                <a href="../frontend/page/journal.html" class="buy">1 BUY</a>
+                <a href="../frontend/page/journal.html" class="sell">2 SELL</a>
+
+                <button class="alert-btn">3 ALERT</button>
             </div>
         </div>
 
