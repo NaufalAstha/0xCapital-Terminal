@@ -58,7 +58,7 @@ renderCharts(Number((chartGrid && chartGrid.dataset.chartCount) || 2));
 // Session
 const sessionCount = document.querySelectorAll('.session');
 const sessionTimes = [
-	{id: 'asia', start: 7 * 60, end: 13 * 60 + 59},
+	{id: 'asia', start: 6 * 60, end: 13 * 60 + 59},
 	{id: 'overlap-asia-euro', start: 14 * 60, end: 15 * 60 + 59},
 	{id: 'europe', start: 16 * 60, end: 18 * 60 + 59},
 	{id: 'overlap-euro-america', start: 19 * 60, end: 22 * 60 + 59},
