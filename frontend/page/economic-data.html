@@ -8,25 +8,37 @@
 </head>
 <body>
     <div class="topbar">
-        
         <a href="../index.html"><span>F1</span> CHART</a>
         <a href="../page/economic-data.html" class="active"><span>F2</span> ECONOMIC DATA</a>
         <a href="../page/news.html"><span>F3</span> NEWS</a>
         <a href="../page/news.html"><span>F4</span> JOURNAL</a>
         <a href="../page/portofolio.html"><span>F5</span> PORTOFOLIO</a>
         <a href="../page/account.html"><span>F6</span> ACCOUNT</a>
-
     </div>
 
     <main>
-        <iframe class="economic-calender" src="https://sslecal2.investing.com?columns=exc_flags,exc_importance,exc_actual,exc_forecast,exc_previous&importance=2,3&features=datepicker&countries=5&calType=week&timeZone=27&lang=1" width="650" height="467" frameborder="0" allowtransparency="true" marginwidth="0" marginheight="0"></iframe>
-        
-        <div class="dxy-chart">
-            <iframe height="865" width="1260" src="https://ssltvc.investing.com/?pair_ID=942611&height=840&width=1260&interval=1800&plotStyle=line&domain_ID=1&lang_ID=1&timezone_ID=21"></iframe>
+        <iframe
+            class="economic-calender"
+            src="https://sslecal2.investing.com?columns=exc_flags,exc_importance,exc_actual,exc_forecast,exc_previous&importance=2,3&features=datepicker&countries=5&calType=week&timeZone=27&lang=1"
+            frameborder="0"
+            allowtransparency="true"
+            marginwidth="0"
+            marginheight="0">
+        </iframe>
+
+        <div class="dxy-chart" id="dxy-chart-container">
+            <iframe
+                id="dxy-chart-iframe"
+                title="DXY Chart"
+                frameborder="0"
+                allowtransparency="true"
+                scrolling="no">
+            </iframe>
         </div>
     </main>
 
-<script src="../js/script.js"></script>
-<script src="../js/page-switch.js"></script>
+    <script src="../js/economic-data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/page-switch.js"></script>
 </body>
 </html>
