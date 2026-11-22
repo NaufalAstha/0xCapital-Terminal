@@ -59,57 +59,57 @@
             
             <div class="input-group">
 
+                <div class="input-group">
+
                 <div class="title-group">
                     <p class="title">LOT SIZE :</p>
 
-                    <button id="small-lot">0,01</button>
-                    <button id="mid-lot">0,1</button>
-                    <button id="big-lot">1</button>
+                    <button type="button" id="small-lot" class="presetLot" data-target="inputLot" data-value="0,01">0,01</button>
+                    <button type="button" id="mid-lot" class="presetLot" data-target="inputLot" data-value="0,1">0,1</button>
+                    <button type="button" id="big-lot" class="presetLot" data-target="inputLot" data-value="1">1</button>
                 </div>
 
                 <div class="size">
-                    
-
                     <div class="input">
                         <p>SIZE (LOT)</p>
-                        <input type="text" id="input" inputmode="decimal" placeholder="0,01">
+                        <input type="text" id="inputLot" class="numberFormat" inputmode="decimal" placeholder="0,01">
                     </div>
                 </div>
 
                 <p class="title">ENTRY :</p>
                 <div class="entry"> 
-                    <button id="minus">-</button>
+                    <button type="button" class="addButton" data-target="inputEntry" data-step="-100">-</button>
 
                     <div class="input">
                         <p>PRICE ($)</p>
-                        <input type="text" id="inputEntry" inputmode="decimal" placeholder="2.100">
+                        <input type="text" class="numberFormat" id="inputEntry" inputmode="decimal" placeholder="2.100">
                     </div>
 
-                    <button id="plus">+</button>
+                    <button type="button" class="addButton" data-target="inputEntry" data-step="100">+</button>
                 </div>
 
                 <p class="title">TAKE PROFIT :</p>
                 <div class="take-profit">
-                    <button id="minus">-</button>
+                    <button type="button" class="addButton" data-target="inputTP" data-step="-100">-</button>
 
                     <div class="input">
                         <p>PRICE ($)</p>
-                        <input type="text" id="inputTP" inputmode="decimal" placeholder="2.200">
+                        <input type="text" class="numberFormat" id="inputTP" inputmode="decimal" placeholder="2.200">
                     </div>
 
-                    <button id="plus">+</button>
+                    <button type="button" class="addButton" data-target="inputTP" data-step="100">+</button>
                 </div>
 
                 <p class="title">STOP LOSS :</p>
                 <div class="stop-loss">
-                    <button id="minus">-</button>
+                    <button type="button" class="addButton" data-target="inputSL" data-step="-100">-</button>
 
                     <div class="input">
                         <p>PRICE ($)</p>
-                        <input type="text" id="inputSL" inputmode="decimal" placeholder="2.000">
+                        <input type="text" class="numberFormat" id="inputSL" inputmode="decimal" placeholder="2.000">
                     </div>
 
-                    <button id="plus">+</button>
+                    <button type="button" class="addButton" data-target="inputSL" data-step="100">+</button>
                 </div>
 
                 <p class="title">NOTE (OPTIONAL) :</p>
@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="execution">
-                    <button>PLACE ORDER</button>
+                    <button type="button">PLACE ORDER</button>
                 </div>
             </div>
 
