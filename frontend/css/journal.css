@@ -3,6 +3,7 @@
     --color : #fff;
     --sec-color : #151515;
     --thrid-color: #252525;
+    --fourth-color : #9e9e9e;
     --highlight : #FFAE11;
 }
 
@@ -96,16 +97,18 @@ main .container{
     margin: 0.938rem;
 }
 
-main .container .button-group{
+.button-group{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    width: 100%;
+    margin-top: 0.938rem;
+    margin-bottom: 0.938rem;
+
+    width: 96%;
 }
 
-main .container .button-group button{
-    margin: 0.938rem;
+.button-group button{
     padding: 0.5rem;
 
     font-weight: 800;
@@ -114,42 +117,368 @@ main .container .button-group button{
 
     color: var(--color);
 
-    width: 50%;
+    width: 100%;
 }
 
-main .container .button-group button:hover{
+.button-group button:hover{
     cursor: pointer;
 }
 
-main .container .button-group .buy{
+.buy{
+    margin-right: 0.5rem;
     background: #079981;
 }
 
-main .container .button-group .sell{
+.sell{
+    margin-left: 0.5rem;
     background: #F23645;
 }
 
-main .container .entry-group{
+/* Dropdown */
+.dropdown{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    gap: 0.938rem;
+    margin-bottom: 0.938em;
+
+    width: 96%;
+}
+
+main select{
+    width: 100%;
+
+    padding: 0.5rem;
+
+    border: none;
+
+    font-weight: 700;
+    text-align: center;
+
+    background: var(--thrid-color);
+    color: var(--color);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.pair-Select, .orderType{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.pair-Select, .orderType p{
+    font-size: 0.8em;
+    color: var(--fourth-color);
+}
+
+/* Input */
+main .input-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     gap: 0.938rem;
 
     width: 100%;
 }
 
-main .container .entry-group input{
-    background: var(--thrid-color);
-    color: var(--sec-color);
+.input-group .title{
+    text-align: left;
+    font-size: 0.8em;
 
-    padding: 0.3rem;
+    width: 96%;
+    margin-top: 0.3rem;
 
-    border: none;
+    color: var(--fourth-color);
 }
 
-main .container .entry-group input:focus{
+/* Size */
+.title-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 96%;
+
+    gap: 0.938rem;
+}
+
+.title-group button{
     border: none;
+
+    padding: 0.3rem 1rem;
+
+    background: var(--thrid-color);
+    color: var(--fourth-color);
+}
+
+.title-group button:hover{
+    cursor: pointer;
+}
+
+main .input-group .size{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    gap: 0.938rem;
+
+    width: 96%;
+}
+
+main .input-group .size .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: var(--thrid-color);
+
+    gap: 0.5rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+main .input-group .size .input input{
+    border: none;
+    outline: none;
+
+    background: none;
+    color: var(--color);
+
+    text-align: center;
+
+    width: 100%;
+}
+
+main .input-group .size p{
+    font-size: 0.75em;
+
+    color: var(--fourth-color);
+}
+
+/* Entry */
+main .input-group .entry{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    background: var(--thrid-color);
+
+    width: 96%;
+
+    gap: 0.938rem;
+    padding: 0.5rem;
+}
+
+main .input-group .entry .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 0.5rem;
+}
+
+main .input-group .entry .input p{
+    font-size: 0.75em;
+    color: var(--fourth-color);
+}
+
+main .input-group .entry .input input{
+    background: none;
+    border: none;
+    outline: none;
+
+    text-align: center;
+
+    font-size: 1em;
+
+    color: var(--color);
+
+    width: 100%;
+}
+
+main .input-group .entry button{
+    background: none;
+    border: none;
+    color: var(--color);
+
+    font-size: 1em;
+
+    margin: 0.938rem;
+
+    width: 2%;
+}
+
+main .input-group .entry button:hover{
+    cursor: pointer;
+}
+
+/* Take Profit */
+.take-profit{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 0.938rem;
+    padding: 0.5rem;
+
+    width: 96%;
+
+    background: var(--thrid-color);
+}
+
+.take-profit .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.take-profit .input p{
+    font-size: 0.75em;
+    color: var(--fourth-color);
+}
+
+.take-profit .input input{
+    text-align: center;
+    font-size: 1em;
+
+    border: none;
+    outline: none;
+
+    background: none;
+    color: var(--color);
+
+    width: 100%;
+}
+
+.take-profit button{
+    background: none;
+    border: none;
+    color: var(--color);
+
+    font-size: 1em;
+
+    margin: 0.938rem;
+
+    width: 2%;
+}
+
+/* Stop Loss */
+.stop-loss{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 0.938rem;
+    padding: 0.5rem;
+
+    width: 96%;
+
+    background: var(--thrid-color);
+}
+
+.stop-loss .input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 0.5rem;
+
+    width: 100%;
+}
+
+.stop-loss .input p{
+    font-size: 0.75em;
+    color: var(--fourth-color);
+}
+
+.stop-loss .input input{
+    text-align: center;
+    font-size: 1em;
+
+    width: 100%;
+
+    color: var(--color);
+
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.stop-loss button{
+    background: none;
+    border: none;
+    color: var(--color);
+
+    font-size: 1em;
+
+    margin: 0.938rem;
+
+    width: 2%;
+}
+
+/* Thesis */
+.thesis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 96%;
+}
+
+.thesis input{
+    text-align: left;
+
+    width: 100%;
+
+    padding: 1.5rem 0.5rem;
+
+    border: none;
+    outline: none;
+
+    background: var(--thrid-color);
+    color: var(--color);
+}
+
+/* execution */
+.execution{
+    width: 96%;
+
+    margin-bottom: 0.938rem;
+}
+
+.execution button{
+    border: none;
+
+    background: #079981;
+    color: var(--color);
+
+    width: 100%;
+
+    font-weight: 800;
+
+    padding: 1rem;
+}
+
+.execution button:hover{
+    cursor: pointer;
 }
 
 /* history trade */

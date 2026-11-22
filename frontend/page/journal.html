@@ -34,15 +34,98 @@
                 <button class="sell">2 SELL</button>
             </div>
             
-            <div class="entry-group">
-                <p>ENTRY :</p>
-                <input type="number" placeholder="2.011">
-                <p>USD</p>
+            <div class="dropdown">
+                <div class="pair-Select">
+                    <P>PAIR :</P>
+                    <select name="pair" id="pair">
+                        <option value="xau">XAU / USD</option>
+                        <option value="euro">EURO / USD</option>
+                        <option value="jpy">USD / JPY</option>
+                        <option value="chf">USD / CHF</option>
+                        <option value="aud">USD / AUD</option>
+                    </select>
+                </div>
+
+                <div class="orderType">
+                    <p>ORDER TYPE :</p>
+                    <select name="orderType" id="orderType">
+                        <option value="">LIMIT ORDER</option>
+                        <option value="">MARKET ORDER</option>
+                        <option value="">BUY STOP</option>
+                        <option value="">SELL STOP</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="input-group">
+
+                <div class="title-group">
+                    <p class="title">LOT SIZE :</p>
+
+                    <button id="small-lot">0,01</button>
+                    <button id="mid-lot">0,1</button>
+                    <button id="big-lot">1</button>
+                </div>
+
+                <div class="size">
+                    
+
+                    <div class="input">
+                        <p>SIZE (LOT)</p>
+                        <input type="text" id="input" inputmode="decimal" placeholder="0,01">
+                    </div>
+                </div>
+
+                <p class="title">ENTRY :</p>
+                <div class="entry"> 
+                    <button id="minus">-</button>
+
+                    <div class="input">
+                        <p>PRICE ($)</p>
+                        <input type="text" id="inputEntry" inputmode="decimal" placeholder="2.100">
+                    </div>
+
+                    <button id="plus">+</button>
+                </div>
+
+                <p class="title">TAKE PROFIT :</p>
+                <div class="take-profit">
+                    <button id="minus">-</button>
+
+                    <div class="input">
+                        <p>PRICE ($)</p>
+                        <input type="text" id="inputTP" inputmode="decimal" placeholder="2.200">
+                    </div>
+
+                    <button id="plus">+</button>
+                </div>
+
+                <p class="title">STOP LOSS :</p>
+                <div class="stop-loss">
+                    <button id="minus">-</button>
+
+                    <div class="input">
+                        <p>PRICE ($)</p>
+                        <input type="text" id="inputSL" inputmode="decimal" placeholder="2.000">
+                    </div>
+
+                    <button id="plus">+</button>
+                </div>
+
+                <p class="title">NOTE (OPTIONAL) :</p>
+                <div class="thesis">
+                    <input type="text" placeholder="ANTROPHIC IPO">
+                </div>
+
+                <div class="execution">
+                    <button>PLACE ORDER</button>
+                </div>
             </div>
 
         </div>
     </main>
 
+<script src="../js/journal.js"></script>
 <script src="../frontend/js/script.js"></script>
 <script src="../js/page-switch.js"></script>
 </body>
