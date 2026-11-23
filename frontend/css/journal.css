@@ -518,36 +518,62 @@ main .input-group .entry button:hover{
 }
 
 /* history trade */
-main .history{
+.history{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
+    width: 60%;
+
+    gap: 0.938rem;
+    margin-left: 0.938rem;
+
     background: var(--sec-color);
     border: 1px solid var(--thrid-color);
-
-    margin: 0.938rem;
-    margin-right: 0%;
-    padding: 0.983rem;
-
-    width: 60%;
-    height: 100%;
 }
 
-main .history .history-trade{
+.history .history-trade{
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-
-    background: var(--thrid-color);
-
-    padding: 0.5rem;
-    gap: 0.983rem;
+    flex-direction: column;
 
     width: 100%;
+}
 
-    cursor: pointer;
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 96%;
+
+    font-size: 0.8em;
+
+    color: var(--fourth-color);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 96%;
+
+    margin-bottom: 0.938rem;
+}
+
+.content button{
+    border: none;
+    outline: none;
+
+    padding: 0.5rem 1rem;
+
+    font-weight: 700;
+
+    background: var(--thrid-color);
+    color: var(--color);
 }
 
 /* Responsive */
