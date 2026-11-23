@@ -30,8 +30,8 @@
         <div class="container">
 
             <div class="button-group">
-                <button class="buy">1 BUY</button>
-                <button class="sell">2 SELL</button>
+                <button class="buy active" data-side="buy">1 BUY</button>
+                <button class="sell" data-side="sell">2 SELL</button>
             </div>
             
             <div class="dropdown">
@@ -110,6 +110,11 @@
                     </div>
 
                     <button type="button" class="addButton" data-target="inputSL" data-step="100">+</button>
+                </div>
+
+                <div class="result">
+                    <p>EST. PROFIT ($) : <span id="profitResult">-</span></p>
+                    <p>EST. LOSS ($): <span id="lossResult">-</span></p>
                 </div>
 
                 <p class="title">NOTE (OPTIONAL) :</p>

@@ -115,7 +115,8 @@ main .container{
 
     border: none;
 
-    color: var(--color);
+    color: var(--fourth-color);
+    background: var(--thrid-color);
 
     width: 100%;
 }
@@ -124,14 +125,18 @@ main .container{
     cursor: pointer;
 }
 
-.buy{
+.buy.active{
     margin-right: 0.5rem;
+
     background: #079981;
+    color: var(--color);
 }
 
-.sell{
+.sell.active{
     margin-left: 0.5rem;
+
     background: #F23645;
+    color: var(--color);
 }
 
 /* Dropdown */
@@ -432,6 +437,37 @@ main .input-group .entry button:hover{
     margin: 0.938rem;
 
     width: 2%;
+}
+
+/* Result */
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin: 0.5rem;
+
+    width: 96%;
+}
+
+.result p{
+    display: flex;
+    align-items: center;
+
+    font-size: 0.8em;
+
+    padding: 0.5rem;
+    gap: 0.938rem;
+
+    height: 3rem;
+    width: 48.5%;
+
+    color: var(--fourth-color);
+    background: var(--thrid-color);
+}
+
+.result p span{
+    color: var(--color);
 }
 
 /* Thesis */
