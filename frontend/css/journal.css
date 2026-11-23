@@ -97,7 +97,7 @@ main .container{
     margin: 0.938rem;
 }
 
-.button-group{
+.container .button-group{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@ main .container{
     width: 96%;
 }
 
-.button-group button{
+.container .button-group button{
     padding: 0.5rem;
 
     font-weight: 800;
@@ -121,7 +121,7 @@ main .container{
     width: 100%;
 }
 
-.button-group button:hover{
+.container .button-group button:hover{
     cursor: pointer;
 }
 
@@ -539,7 +539,12 @@ main .input-group .entry button:hover{
     align-items: center;
     flex-direction: column;
 
-    width: 100%;
+    width: 96%;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    border: 1px solid var(--thrid-color);
 }
 
 .topbar{
@@ -574,6 +579,40 @@ main .input-group .entry button:hover{
 
     background: var(--thrid-color);
     color: var(--color);
+}
+
+/* Bottom */
+.history .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 30%;
+
+    margin-bottom: 0.938rem;
+}
+
+.history .bottom button{
+    border: none;
+
+    padding: 0.5rem 1rem;
+
+    font-weight: 700;
+
+    background: var(--thrid-color);
+    color: var(--color);
+}
+
+.history .bottom button:hover{
+    cursor: pointer;
+}
+
+.bottom .button-group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0.938rem;
 }
 
 /* Responsive */
