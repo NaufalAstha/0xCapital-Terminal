@@ -1,5 +1,6 @@
 async function loadRSSFeed() {
-    const jsonUrl = 'https://rss.app/feeds/v1.1/PipM1at9feyTrIIK.json';
+    const feedUrl = 'https://news.google.com/rss/search?q=financial+markets&hl=en-US&gl=US&ceid=US:en';
+    const jsonUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}&count=50`;
     const newsList = document.getElementById('news-feed');
 
     function showMessage(message) {
@@ -16,6 +17,10 @@ async function loadRSSFeed() {
         }
 
         const data = await response.json();
+        if (data.status !== 'ok') {
+            throw new Error(data.message || 'Penyedia berita gagal mengembalikan data.');
+        }
+
         const items = data.items;
 
         if (Array.isArray(items) && items.length > 0) {
@@ -23,7 +28,8 @@ async function loadRSSFeed() {
             items.slice(0, 50).forEach(item => {
                 const li = document.createElement('li');
 
-                const imageUrl = item.image || (Array.isArray(item.attachments) && item.attachments[0]?.url);
+                const imageUrl = item.thumbnail || item.enclosure?.link || item.image ||
+                    (Array.isArray(item.attachments) && item.attachments[0]?.url);
                 if (imageUrl) {
                     try {
                         const parsedImageUrl = new URL(imageUrl);
@@ -52,7 +58,7 @@ async function loadRSSFeed() {
                 const title = document.createElement('a');
                 title.textContent = item.title || 'Berita tanpa judul';
                 try {
-                    const articleUrl = new URL(item.url);
+                    const articleUrl = new URL(item.link || item.url);
                     if (articleUrl.protocol === 'https:' || articleUrl.protocol === 'http:') {
                         title.href = articleUrl.href;
                         title.target = '_blank';
@@ -63,7 +69,7 @@ async function loadRSSFeed() {
                 }
                 content.appendChild(title);
 
-                const publishDate = new Date(item.date_published);
+                const publishDate = new Date(item.pubDate || item.date_published);
                 if (!Number.isNaN(publishDate.getTime())) {
                     const date = document.createElement('span');
                     date.className = 'news-date';
@@ -84,7 +90,7 @@ async function loadRSSFeed() {
 
     } catch (error) {
         console.error('Terjadi kesalahan:', error);
-        showMessage('Gagal memuat berita. Periksa koneksi atau izin CORS.');
+        showMessage('Berita tidak dapat dimuat saat ini. Silakan coba lagi nanti.');
     }
 }
 

@@ -21,12 +21,13 @@
         <div class="history">
             <div class="history-trade">
                 <div class="topbar">
-                    <p id="data">23/11/2026</p>
+                    <p id="openTrade">23/11/2026 (09:45 PM)</p>
                     <p id="assets">XAU / USD</p>
                     <p id="tradeStatus">RUNNING</p>
                 </div>
 
                 <div class="content">
+                    <p>TYPE : <span id="tradeType">-</span></p>
                     <p>ENTRY ($) : <span id="entry">-</span></p>
                     <p>NET ($) : <span id="net">-</span></p>
                     <button id="detail">DETAIL</button>
@@ -37,9 +38,9 @@
                 <button>PREV</button>
 
                 <div class="button-group">
-                    <button><span>-</span></button>
-                    <button><span>-</span></button>
-                    <button><span>-</span></button>
+                    <button><span id="pageNumber">-</span></button>
+                    <button><span id="pageNumber">-</span></button>
+                    <button><span id="pageNumber">-</span></button>
                 </div>
 
                 <button>NEXT</button>
@@ -69,10 +70,10 @@
                 <div class="orderType">
                     <p>ORDER TYPE :</p>
                     <select name="orderType" id="orderType">
-                        <option value="">LIMIT ORDER</option>
-                        <option value="">MARKET ORDER</option>
-                        <option value="">BUY STOP</option>
-                        <option value="">SELL STOP</option>
+                        <option value="limit">LIMIT ORDER</option>
+                        <option value="market">MARKET ORDER</option>
+                        <option value="buyStop">BUY STOP</option>
+                        <option value="sellStop">SELL STOP</option>
                     </select>
                 </div>
             </div>

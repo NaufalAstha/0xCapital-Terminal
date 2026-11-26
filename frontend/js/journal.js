@@ -116,3 +116,6 @@ sideBtn.forEach((button) => {
 		calculateProfit();
 	});
 });
+
+// Order Type
+const pairSelect = document.getElementById('pair');
